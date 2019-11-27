@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+//this is demo main git
+
 fun square() : (Int) -> Unit{
     return {
        //it: implicit name of a single parameter
