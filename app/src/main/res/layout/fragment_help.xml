@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragment.HelpFragment">
+
+    <LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@android:color/white">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/help_view_shadow">
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+
+            />
+            <LinearLayout
+                    android:orientation="vertical" android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+            >
+
+                <RelativeLayout
+                        android:id="@+id/rl_help_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+                    <ImageView
+                            android:id="@+id/img_call_help"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_call_h"
+                            android:layout_marginLeft="10dp"/>
+                    <TextView
+                            android:id="@+id/txt_call_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Call"
+                            android:layout_toRightOf="@+id/img_call_help"
+                            android:textSize="14dp"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_help_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+                    <ImageView
+                            android:id="@+id/img_email_help"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_mail_h"
+                            android:layout_marginLeft="10dp"/>
+                    <TextView
+                            android:id="@+id/txt_email_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:layout_toRightOf="@+id/img_email_help"
+                            android:textSize="14dp"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_help_facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+                    <ImageView
+                            android:id="@+id/img_facebook_help"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_facebook_h"
+                            android:layout_marginLeft="10dp"
+                    />
+                    <TextView
+                            android:id="@+id/txt_facebook_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Facebook`"
+                            android:layout_toRightOf="@+id/img_facebook_help"
+                            android:textSize="14dp"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_help_twitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+                    <ImageView
+                            android:id="@+id/img_twitter_help"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_twitter_h"
+                            android:layout_marginLeft="10dp"/>
+                    <TextView
+                            android:id="@+id/txt_twitter_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Twitter"
+                            android:layout_toRightOf="@+id/img_twitter_help"
+                            android:textSize="14dp"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_help_share"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+                    <ImageView
+                            android:id="@+id/img_share_help"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_share_h"
+                            android:layout_marginLeft="10dp"/>
+                    <TextView
+                            android:id="@+id/txt_share_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Share"
+                            android:layout_toRightOf="@+id/img_share_help"
+                            android:textSize="14dp"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"/>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

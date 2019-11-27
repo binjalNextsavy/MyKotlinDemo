@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature
+            android:name="android.hardware.camera2"
+            android:required="false"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher_round"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.SplashAnimated"
+        android:exported="true">
+        </activity>
+        <activity
+                android:name=".activity.DemoForNavigationD"
+                android:exported="true"
+                android:label="@string/title_activity_demo_for_navigation_d"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".activity.DemoColorPicker"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".activity.TextToSpeechActivity"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".sqlitdemo.UserRegisterActivity"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".activity.MediaPlayerDemo"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".retrofit.RMainActivity"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".activity.VollyDActivity"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".activity.FirebasestoreImgDemo"
+                android:exported="true"
+                android:label="Store Image">
+        </activity>
+        <activity
+                android:name=".activity.FirebaseFirestoreDemo"
+                android:exported="true"
+                android:label="Cloud Firestore">
+        </activity>
+        <activity
+                android:name=".activity.SplashScreen"
+                android:label="Splash Screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activity.VerifyPhoneActivity"
+                android:exported="true"
+                android:label="Verify Phone number">
+        </activity>
+        <activity
+                android:name=".activity.FirebasePhoneAuth"
+                android:exported="true"
+                android:label="FirebaseAuth UI">
+        </activity>
+        <activity
+                android:name=".activity.DemoForCamera"
+                android:label="Camera">
+        </activity>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+                android:name=".activity.CheckInternet"
+                android:exported="true"
+                android:label="Check Internet">
+        </activity>
+        <activity
+                android:name=".forNotification.FirebaseNotification2"
+                android:exported="true"
+                android:label="Notification">
+        </activity>
+        <!--
+        <service
+                android:name=".ForNotification.MyFirebaseInstnceIdservice">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        -->
+        <service
+                android:name=".forNotification.MyFirebaseService"
+                android:enabled="true"
+                android:exported="true"
+                android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:name=".forNotification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+                android:name=".forNotification.FirebaseNotificationDemo"
+                android:exported="true"
+                android:label="Notification">
+        </activity>
+        <activity
+                android:name=".activity.DemoWhatsapp"
+                android:exported="true"
+                android:label="Whatsapp">
+        </activity>
+        <activity
+                android:name=".forJson.DemoForJson"
+                android:exported="true"
+                android:label="Json">
+        </activity>
+        <activity
+                android:name=".activity.DemoForGson2"
+                android:exported="true"
+                android:label="Gson">
+        </activity>
+        <activity
+                android:name=".activity.RetrofitActivity"
+                android:label="Retrofit">
+        </activity>
+        <activity
+                android:name=".activity.CustomRecyclerview"
+                android:exported="true"
+                android:label="RecyclerView">
+        </activity>
+        <activity
+                android:name=".activity.TabLayoutWithView"
+                android:exported="true"
+                android:label="TabLayout">
+        </activity>
+        <activity
+                android:name=".activity.CustomListview"
+                android:label="Listview">
+        </activity>
+        <activity
+                android:name=".activity.HomeScreen"
+                android:label="Home">
+        </activity>
+        <activity
+                android:name=".activity.LoginScreen"
+                android:exported="true"
+                android:label="Login">
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
+        </activity>
+    </application>
+
+</manifest>
