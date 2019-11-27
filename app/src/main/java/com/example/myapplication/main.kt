@@ -1,6 +1,6 @@
 package com.example.myapplication
 
-//this is demo main
+//this is demo main git
 
 fun square() : (Int) -> Unit{
     return {
