@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import kotlin.run as run1
 
+//This is demo class
 class MyCLass {
 
     //Companion object is similar to static method in java
