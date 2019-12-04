@@ -14,6 +14,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:visibility="gone"/>
     <androidx.cardview.widget.CardView
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +55,14 @@
                     android:layout_gravity="center"
                     android:id="@+id/refresh1"
                     android:layout_marginTop="30dp"/>
+            
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+    
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,12 +30,12 @@ class DemoForCamera : AppCompatActivity() {
 
         var toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.title = "Camera"
+
         // Here, we are making a folder named picFolder to store
         // pics taken by the camera using this application.
 
-        val dir =
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString() + "/picFolder/";
-        //val dir = Environment.getExternalStoragePublicDirectory("/DCIM/Camera").toString() + "/picsFolder"
+        val dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString() + "/picFolder/";
+
         val newdtr = File(dir)
         newdtr.mkdirs()
         btnCamera = findViewById(R.id.btn_camera)
@@ -69,19 +69,12 @@ class DemoForCamera : AppCompatActivity() {
     }
 
     private fun checkPermission(): Boolean {
-        return !(ContextCompat.checkSelfPermission(
-            this,
-            Manifest.permission.CAMERA
-        ) != PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE
-                ) != PackageManager.PERMISSION_GRANTED)
+        return !(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(
+            this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
     }
 
     private fun requestPermission() {
-        ActivityCompat.requestPermissions(
-            this,
+        ActivityCompat.requestPermissions(this,
             arrayOf(
                 Manifest.permission.CAMERA,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
