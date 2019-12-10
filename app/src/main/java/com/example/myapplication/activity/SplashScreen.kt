@@ -8,26 +8,34 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.myapplication.Chat.ChatRegisterActivity
+import com.example.myapplication.Chat.ChatUserActivity
 import com.example.myapplication.R
 import com.example.myapplication.fragment.HelpFragment
 import com.example.myapplication.sqlitdemo.UserRegisterActivity
+import com.firebase.client.Firebase
 import com.google.firebase.auth.FirebaseAuth
 
 
 class SplashScreen : AppCompatActivity() {
     lateinit var btn: Button
     lateinit var btn2: Button
+    lateinit var btn4: Button
     var btn3: Button? = null
     lateinit var toolbar: Toolbar
     lateinit var ll : LinearLayout
+    lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         btn = findViewById(R.id.splashbtn)
         btn2 = findViewById(R.id.firebasebtn)
         btn3 = findViewById(R.id.sqlitebtn)
+        btn4 = findViewById(R.id.btnchat)
         toolbar = findViewById(R.id.toolbar)
         toolbar.setTitle("SplashScreen")
+
+        mAuth = FirebaseAuth.getInstance()
 
         ll = findViewById(R.id.dynamiclinear)
 
@@ -47,6 +55,22 @@ class SplashScreen : AppCompatActivity() {
         btn3!!.setOnClickListener {
             val i = Intent(this@SplashScreen, UserRegisterActivity::class.java)
             startActivity(i)
+        }
+
+        btn4!!.setOnClickListener {
+            val i = Intent(this@SplashScreen, ChatRegisterActivity::class.java)
+            startActivity(i)
+/*
+            var user = mAuth.currentUser
+            if (mAuth.currentUser != null){
+                val i = Intent(this@SplashScreen, ChatUserActivity::class.java)
+                startActivity(i)
+            } else {
+                val i = Intent(this@SplashScreen, ChatRegisterActivity::class.java)
+                startActivity(i)
+            }
+*/
+
         }
 
         //add button dynamically

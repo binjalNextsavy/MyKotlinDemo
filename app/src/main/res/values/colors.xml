@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#121619</color>
     <color name="colorAccent">#121619</color>
     <color name="light_blue_100">#B3E5FC</color>
+    <color name="toolbar_color">#008577</color>
+    <color name="chat_bg">#FFFFF0</color>
 </resources>

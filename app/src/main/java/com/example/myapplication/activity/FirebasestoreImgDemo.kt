@@ -120,7 +120,7 @@ class FirebasestoreImgDemo : AppCompatActivity() {
         }
     }
     companion object{
-        private val PICK_IMG_REQ = 321
+        private const val PICK_IMG_REQ = 321
 
     }
 }

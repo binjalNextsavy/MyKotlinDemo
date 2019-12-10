@@ -43,8 +43,8 @@ public class FirebasePhoneAuth extends AppCompatActivity {
         providers.add(new AuthUI.IdpConfig.PhoneBuilder().build());
         providers.add(new AuthUI.IdpConfig.GoogleBuilder().build());
         //Add Dependecies for facebook and twitter
-        //providers.add(new AuthUI.IdpConfig.FacebookBuilder().build());
-        //providers.add(new AuthUI.IdpConfig.TwitterBuilder().build());
+       // providers.add(new AuthUI.IdpConfig.FacebookBuilder().build());
+//        providers.add(new AuthUI.IdpConfig.TwitterBuilder().build());
 
 
         findViewById(R.id.buttonContinue).setOnClickListener(new View.OnClickListener() {

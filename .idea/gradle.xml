@@ -9,6 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/demolibrary" />
+            <option value="$PROJECT_DIR$/mylibraydemo" />
+            <option value="$PROJECT_DIR$/toastylibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
