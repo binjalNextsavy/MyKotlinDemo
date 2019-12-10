@@ -45,7 +45,7 @@ class DemoForCamera : AppCompatActivity() {
 
                 // Here, the counter will be incremented each time, and the
                 // picture taken by camera will be stored as 1.jpg,2.jpg and likewise.
-                count++
+                count = count++
                 val file = "$dir$count.jpg"
                 val newFile = File(file)
                 try {

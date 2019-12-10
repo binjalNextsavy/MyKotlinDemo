@@ -59,10 +59,16 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     
-    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
 
 
 
 
     </FrameLayout>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="92dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

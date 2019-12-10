@@ -1,14 +1,24 @@
 package com.example.myapplication.activity;
 
+import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.myapplication.R;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 public class MediaPlayerDemo extends AppCompatActivity {
-   /* Button b1,b2,b3,b4;
+   Button b1,b2,b3,b4;
     MediaPlayer mediaPlayer;
     ImageView iv;
 
@@ -26,7 +36,7 @@ public class MediaPlayerDemo extends AppCompatActivity {
     String url = "https://cdn.unimedliving.com/production/audios/462/saying-I-love-you-what-does-that-mean-RU1805-6-010809v1n.mp3";
     Uri myUri = Uri.parse(url);
     boolean playPlus;
-    boolean initialStage =true;*/
+    boolean initialStage =true;
 
    Button playVideo;
     VideoView videoView;
@@ -36,25 +46,25 @@ public class MediaPlayerDemo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_media_player_demo);
 
-        playVideo = findViewById(R.id.playvideo);
+       /* playVideo = findViewById(R.id.playvideo);
 
        playVideo.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                 videoView = findViewById(R.id.videoview);
                Uri uri = Uri.parse("https://www.youtube.com/embed/avwlXWvGGWY?rel=0&amp;showinfo=0");
-               /*Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+               *//*Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                intent.setDataAndType(uri, "video/*");
                 startActivity(intent);
-               */
+               *//*
                videoView.setVideoURI(uri);
                videoView.setMediaController(new MediaController(MediaPlayerDemo.this));
                 videoView.requestFocus();
                videoView.start();
            }
-       });
+       });*/
 
-        /*b1 = findViewById(R.id.mpbutton);
+        b1 = findViewById(R.id.mpbutton);
         b2 = findViewById(R.id.mpbutton2);
         b3 = findViewById(R.id.mpbutton3);
         b4 = findViewById(R.id.mpbutton4);
@@ -283,16 +293,19 @@ public class MediaPlayerDemo extends AppCompatActivity {
             mediaPlayer.reset();
             mediaPlayer.release();
             mediaPlayer = null;
-        }*/
+        }
     }
 
-    public void gone(View v){
+
+
+
+   /* public void gone(View v){
          videoView.setZOrderOnTop(true);
         View placeholder = (View) findViewById(R.id.placeholder);
 
         placeholder.setVisibility(View.GONE);
         videoView.start();
-    }
+    }*/
 
 
 }

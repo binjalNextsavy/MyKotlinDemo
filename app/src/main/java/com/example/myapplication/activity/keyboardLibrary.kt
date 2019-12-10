@@ -1,14 +1,14 @@
-package com.example.myapplication.utility
+package com.example.myapplication.activity
 
+/*import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 import com.example.myapplication.R
-import com.facebook.FacebookSdkNotInitializedException
+import com.example.toastylibrary.FancyToast
 
-class KeyBoardLib : AppCompatActivity(), View.OnClickListener {
+class keyboardLibrary : AppCompatActivity() ,View.OnClickListener{
 
     lateinit var b1 : Button
     lateinit var b2 : Button
@@ -19,10 +19,9 @@ class KeyBoardLib : AppCompatActivity(), View.OnClickListener {
     lateinit var b7 : Button
     lateinit var b8 : Button
     lateinit var b9 : Button
-
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.keyboard_lib_demo)
+        setContentView(R.layout.activity_keyboard_library)
 
         b1 = findViewById(R.id.button2)
         b2 = findViewById(R.id.button3)
@@ -50,35 +49,39 @@ class KeyBoardLib : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id) {
             R.id.button2 -> {
-                
+
+                FancyToast.makeText(this, "This is Default Toast", Toast.LENGTH_LONG, FancyToast.default, true)!!.show();
             }
             R.id.button3 -> {
-
+                FancyToast.makeText(this, "Success Toast !", Toast.LENGTH_LONG,
+                    FancyToast.success, true)!!.show();
             }
             R.id.button4 -> {
-
+                FancyToast.makeText(this, "This is an Error Toast", Toast.LENGTH_LONG, FancyToast.error, true)!!.show();
             }
             R.id.button5 -> {
-
+                FancyToast.makeText(this, "Beware of dog", Toast.LENGTH_LONG, FancyToast.warning, true)!!.show();
             }
             R.id.button6 -> {
-
+                FancyToast.makeText(this, "Here is some Info for you", Toast.LENGTH_LONG, FancyToast.info, true)!!.show();
             }
             R.id.button7 -> {
+                FancyToast.makeText(this, "This is Confusing Toast", Toast.LENGTH_LONG, FancyToast.confusing, false)!!.show();
 
             }
             R.id.button8 -> {
-
+                FancyToast.makeText(this, "This is Custom Toast", Toast.LENGTH_LONG, FancyToast.confusing, R.drawable.ic_phone_android_black_24dp, true)!!.show();
             }
             R.id.button9 -> {
-
+                FancyToast.makeText(this, "This is Custom Toast with no android icon",
+                    Toast.LENGTH_LONG, FancyToast.confusing, R.drawable.ic_phone_android_black_24dp, false)!!.show();
             }
             R.id.button10 -> {
-
+                FancyToast.makeText(this, "This is a Success Toast", Toast.LENGTH_LONG, FancyToast.success, false)!!.show();
             }
 
         }
 
     }
+    }*/
 
-}

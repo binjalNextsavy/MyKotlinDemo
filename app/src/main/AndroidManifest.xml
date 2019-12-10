@@ -20,8 +20,24 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.SplashAnimated"
+        <activity android:name=".Chat.ChatUserActivity">
+        </activity>
+        <activity android:name=".Chat.ChatRegisterActivity"
         android:exported="true">
+        </activity>
+        <activity android:name=".Chat.ChatLoginActivity"
+        android:exported="true">
+        </activity>
+        <activity android:name=".Chat.ChatMainActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".activity.keyboardLibrary"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".activity.SplashAnimated"
+                android:exported="true">
         </activity>
         <activity
                 android:name=".activity.DemoForNavigationD"
