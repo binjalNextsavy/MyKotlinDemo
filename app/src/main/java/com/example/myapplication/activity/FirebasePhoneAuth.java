@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FirebasePhoneAuth extends AppCompatActivity {
@@ -37,11 +38,11 @@ public class FirebasePhoneAuth extends AppCompatActivity {
 
         user = new ArrayList<>();
 
-        providers = new ArrayList();
+       /* providers = new ArrayList();
 
         providers.add(new AuthUI.IdpConfig.EmailBuilder().build());
         providers.add(new AuthUI.IdpConfig.PhoneBuilder().build());
-        providers.add(new AuthUI.IdpConfig.GoogleBuilder().build());
+        providers.add(new AuthUI.IdpConfig.GoogleBuilder().build());*/
         //Add Dependecies for facebook and twitter
        // providers.add(new AuthUI.IdpConfig.FacebookBuilder().build());
 //        providers.add(new AuthUI.IdpConfig.TwitterBuilder().build());
@@ -106,22 +107,24 @@ public class FirebasePhoneAuth extends AppCompatActivity {
     }
     public void doGoogleVerification() {
 
-        /*startActivityForResult(
+        startActivityForResult(
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(Arrays.asList(
                                 new AuthUI.IdpConfig.PhoneBuilder().build()))
                         .setLogo(R.mipmap.ic_launcher)
                         .setIsSmartLockEnabled(false,false)
-                        .build(), RC_SIGN_IN);*/
+                        .setTheme(R.style.GreenTheme)
+                        .build(), RC_SIGN_IN);
 
-        startActivityForResult(
+       /* startActivityForResult(
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(providers)
                         .setLogo(R.drawable.bg_rounded)
                         .setIsSmartLockEnabled(false,false)
-                        .build(), RC_SIGN_IN);
+                        .setTheme(R.style.AuthTheme)
+                        .build(), RC_SIGN_IN);*/
     }
 
     @Override

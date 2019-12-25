@@ -17,7 +17,8 @@ class VollyDActivity : AppCompatActivity() {
     private var requestQueue: RequestQueue? = null
     private var stringRequest: StringRequest? = null
     var vollyButton: Button? = null
-    private val url = "http://www.mocky.io/v2/597c41390f0000d002f4dbd1"
+    private val url = "https://mykotlindemo.firebaseio.com"
+    //private val url = "http://www.mocky.io/v2/597c41390f0000d002f4dbd1"
     // private String url = "https://www.unimedliving.com/api/v2/audios";
 //private String url = "https://www.unimedliving.com/api/v2/articles";
 //private String url = "https://api.androidhive.info/contacts/";

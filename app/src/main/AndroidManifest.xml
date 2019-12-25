@@ -8,6 +8,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
 
     <uses-feature
             android:name="android.hardware.camera2"
@@ -20,16 +24,30 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".FirebasePhoneAuthenticate.DemoFirebasePhoneAuth">
+        </activity>
+        <activity android:name=".FirebasePhoneAuthenticate.DemoPhoneAuth">
+        </activity>
+        <activity android:name=".firestore.DisplayListActivity">
+        </activity>
+        <activity
+                android:name=".firestore.FirebaseFirestore"
+                android:exported="true"
+                android:theme="@style/Theme.AppCompat">
+        </activity>
         <activity android:name=".Chat.ChatUserActivity">
         </activity>
-        <activity android:name=".Chat.ChatRegisterActivity"
-        android:exported="true">
+        <activity
+                android:name=".Chat.ChatRegisterActivity"
+                android:exported="true">
         </activity>
-        <activity android:name=".Chat.ChatLoginActivity"
-        android:exported="true">
+        <activity
+                android:name=".Chat.ChatLoginActivity"
+                android:exported="true">
         </activity>
-        <activity android:name=".Chat.ChatMainActivity"
-        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".Chat.ChatMainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
                 android:name=".activity.keyboardLibrary"
@@ -198,6 +216,17 @@
                 android:name=".MainActivity"
                 android:exported="true">
         </activity>
+        <activity
+                android:name=".bluetooth.BluetoothChat"
+                android:configChanges="orientation|keyboardHidden"
+                android:exported="true"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".bluetooth.DeviceListActivity"
+                android:configChanges="orientation|keyboardHidden"
+                android:label="@string/select_device"
+                android:theme="@android:style/Theme.Dialog"/>
     </application>
 
 </manifest>

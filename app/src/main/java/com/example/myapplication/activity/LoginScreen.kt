@@ -140,7 +140,9 @@ class LoginScreen : AppCompatActivity() {
 
                 userName.setText("")
                 userPassword.setText("")
+
             }
+
         }
 
         retrivedDate()

@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.adapter.AdapterForrecycler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -67,8 +66,8 @@ class CustomRecyclerview : AppCompatActivity() {
         users.add(User("PQR", "ZZZZZZ"))
         users.add(User("QWE", "ZZZZZZ"))
 
-        val adapter = AdapterForrecycler(users)
-        recyclerview.adapter = adapter
+        //val adapter = AdapterForrecycler(users)
+        //recyclerview.adapter = adapter
 
         //Hide/show bottom layout when scroll recyclerview
         /*recyclerview.addOnScrollListener(object : RecyclerView.OnScrollListener(){
